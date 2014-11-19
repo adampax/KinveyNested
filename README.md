@@ -10,7 +10,7 @@ Test app for kinvey relational data bugs
 
 `seasons`
 
-`recipes`
+`meals`
 
 2: Add app key, secret and user/pass to the constants below
 
