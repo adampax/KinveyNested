@@ -152,7 +152,7 @@ test1.addEventListener('click', function() {
  */
 
 var test2 = Ti.UI.createButton({
-	title : 'Test 2: Recipes - Months - Season',
+	title : 'Test 2: Meals - Months - Season',
 	top : 150,
 	left : 10
 });
@@ -176,15 +176,58 @@ test2.addEventListener('click', function() {
 				meal.months.forEach(function(month) {
 					
 					
-					var season = month.season ? month.season.name : '<b>undefined</b>';
-					
-					addResult(month.name + ' - ' + season);
-					
-					console.log(month.name + ' - ' + season);
+				month.season = month.season || {};
+				
+				addResult(month.name + ' - ' + month.season.name);
+				
+				console.log(month.name + ' - ' + month.season.name);
 					if (!month.season) {
 						console.log(JSON.stringify(month));
 					}
 				});
+			});
+		},
+		error : function(res) {
+			console.log('fetch error ' + JSON.stringify(res));
+		}
+	});
+});
+
+/*
+ * TEST 3 Single Meal
+ */
+
+var test3 = Ti.UI.createButton({
+	title : 'Test 3: Single Meal',
+	top : 180,
+	left : 10
+});
+win.add(test3);
+
+test3.addEventListener('click', function() {
+	var mealID = '546cf56705e2fe3112008e2e';
+	addResult('\nStarting Test 3: ' + (offlineSwitch.value ? 'Online' : 'Offline') + '\n');
+	var promise = Kinvey.DataStore.get('meals', mealID, {
+		offline : !offlineSwitch.value,
+		relations : {
+			months : 'months',
+			'months.season' : 'seasons'
+
+		},
+		success : function(meal) {
+			addResult(meal.name);
+			
+			
+			meal.months.forEach(function(month) {
+				
+				month.season = month.season || {};
+				
+				addResult(month.name + ' - ' + month.season.name);
+				
+				console.log(month.name + ' - ' + month.season.name);
+				if (!month.season) {
+					console.log(JSON.stringify(month));
+				}
 			});
 		},
 		error : function(res) {
