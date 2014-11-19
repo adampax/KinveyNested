@@ -175,7 +175,7 @@ test2.addEventListener('click', function() {
 				addResult('\n'+(idx+1) + ': ' + meal.name);
 				meal.months.forEach(function(month) {
 					
-					
+				//check for empty object otherwise it blows up if not available
 				month.season = month.season || {};
 				
 				addResult(month.name + ' - ' + month.season.name);
@@ -217,14 +217,13 @@ test3.addEventListener('click', function() {
 		success : function(meal) {
 			addResult(meal.name);
 			
-			
-			meal.months.forEach(function(month) {
-				
+			meal.months.forEach(function(month) {	
+				//check for empty object otherwise it blows up if not available
 				month.season = month.season || {};
 				
 				addResult(month.name + ' - ' + month.season.name);
-				
 				console.log(month.name + ' - ' + month.season.name);
+				
 				if (!month.season) {
 					console.log(JSON.stringify(month));
 				}
