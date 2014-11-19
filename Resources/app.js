@@ -1,6 +1,26 @@
+/*
+ * 1: Create a backend with the following collections:
+ * 	'months'
+ *  'seasons'
+ *  'recipes'
+ * 
+ * 2: Add app key, secret and user/pass to the constants below
+ * 
+ * 3: launch app, click populate
+ * 
+ * 4: Run tests in both online and offline modes
+ * 
+ * 5: Check log for output
+ */
 
+
+const APP_KEY = '';
+const APP_SECRET = '';
+const USER = '';
+const PASS = '';
 
 var Kinvey = require('/lib/kinvey-titanium-1.1.8');
+var Lib = require('/lib/lib');
 
 var win = Ti.UI.createWindow({
 	backgroundColor : '#fff',
@@ -18,7 +38,7 @@ win.add(offlineSwitch);
 var offlineLabel = Ti.UI.createLabel({
 	text : Titanium.Network.getOnline() ? 'Online' : 'Offline',
 	top : 44,
-	left:70
+	left : 70
 });
 win.add(offlineLabel);
 
@@ -26,32 +46,93 @@ offlineSwitch.addEventListener('change', function(e) {
 	offlineLabel.text = offlineSwitch.value ? 'Online' : 'Offline';
 });
 
-var userStatus = Ti.UI.createLabel({
-	top: 100,
-	left: 20,
-	text: 'No active user'
-});
-win.add(userStatus);
-
 var populateBtn = Ti.UI.createButton({
-	title: 'Populate Data',
-	top:140
+	title : 'Populate Data',
+	top : 40,
+	right: 10
 });
 win.add(populateBtn);
 
-populateBtn.addEventListener('click', function(){
-	
+populateBtn.addEventListener('click', function() {
+	var months = Lib.parseJSON('/data/months.json');
+	var seasons = Lib.parseJSON('/data/seasons.json');
+
+	months.forEach(function(month) {
+		Kinvey.DataStore.save('months', month, {
+			success : function(res) {
+				console.log('month added');
+			},
+			error : function(res) {
+				console.log('save: ' + JSON.stringify(res));
+			}
+		});
+	});
+
+	seasons.forEach(function(season) {
+		Kinvey.DataStore.save('seasons', season, {
+			success : function(res) {
+				console.log('sesaon added');
+			},
+			error : function(res) {
+				console.log('save: ' + JSON.stringify(res));
+			}
+		});
+	});
 });
 
-var testBtn = Ti.UI.createButton({
-	title: 'Test',
-	top:180
+var userStatus = Ti.UI.createLabel({
+	top : 80,
+	left : 20,
+	font:{fontSize: 14},
+	text : 'activeUser: none'
 });
-win.add(testBtn);
+win.add(userStatus);
 
-testBtn.addEventListener('click', function(){
-	
+var test1 = Ti.UI.createButton({
+	title : 'Test 1: Month - Season',
+	top : 120,
+	left: 10
 });
+win.add(test1);
+
+test1.addEventListener('click', function() {
+	addResult('\nStarting test 1: ' + (offlineSwitch.value ? 'Online' : 'Offline') + '\n');
+	var promise = Kinvey.DataStore.get('Months', null, {
+		offline : !offlineSwitch.value,
+		relations : {
+			//months : 'months',
+			//'months.season' : 'seasons'
+			season: 'seasons'
+
+		},
+		success : function(response) {
+			response.forEach(function(month){
+				addResult(month.name + ' - ' + month.season.name);
+					console.log(month.name + ' - ' + month.season.name); 
+					if(!month.season.name){
+						console.log(JSON.stringify(month));	
+					}
+			});
+		},
+		error: function(res){
+			console.log('fetch error ' + JSON.stringify(res));
+		}
+	});
+});
+
+
+var results = Ti.UI.createTextArea({
+	top: 220,
+	bottom: 0,
+	width: Ti.UI.FILL,
+	backgroundColor: '#efefef',
+	value: 'hello'
+});
+win.add(results);
+
+function addResult(text){
+	results.value += '\n'+text;
+}
 
 win.open();
 
@@ -63,21 +144,37 @@ var promise = Kinvey.init({
 		online : Titanium.Network.getOnline()// The initial application state.
 	}
 });
-promise.then(function(activeUser) {
-	console.log('activeUser ' + JSON.stringify(activeUser));
-	userStatus.text = 'activeUser: ' + activeUser.username;
 
-	if (!activeUser) {
-		Kinvey.User.login({
-			username : USER,
-			password : PASS
-		}, {
-			success : function(res) {
-				userStatus.text = 'activeUser: ' + res.username;
-			},
-			error: function(res){
-				userStatus.text = 'User login error';
-			}
+/*
+ promise.then(function(activeUser) {
+ console.log('activeUser: ' + activeUser);
+ }, function(error) {
+ console.log('error: ' + error);
+ });*/
+
+promise.then(function(activeUser) {
+
+	if (activeUser) {
+		console.log('activeUser ' + JSON.stringify(activeUser));
+		userStatus.text = 'activeUser: ' + activeUser.username;
+	} else {
+		console.log('doing login');
+
+		Kinvey.User.logout({
+			force : true
+		}).then(function() {
+			Kinvey.User.login({
+				username : USER,
+				password : PASS
+			}, {
+				success : function(res) {
+					userStatus.text = 'activeUser: ' + res.username;
+				},
+				error : function(res) {
+					userStatus.text = 'User login error';
+					console.log('error: ' + JSON.stringify(res));
+				}
+			});
 		});
 	}
 });

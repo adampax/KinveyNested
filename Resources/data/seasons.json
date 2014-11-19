@@ -1,0 +1,68 @@
+[
+	{
+		"_id": "53a9bdefd302a3d014004261",
+		"name": "Winter",
+		"reverseSeasonalityName": "Summer",
+		"id_v1": 4,
+		"sequence": 4,
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-24T18:05:35.202Z",
+			"ect": "2014-06-24T18:05:35.202Z"
+		}
+	}, {
+		"_id": "53a9bdeff38a6acb5d0041ea",
+		"name": "Spring",
+		"reverseSeasonalityName": "Fall",
+		"id_v1": 1,
+		"sequence": 1,
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-24T18:05:35.200Z",
+			"ect": "2014-06-24T18:05:35.200Z"
+		}
+	}, {
+		"_id": "53a9bdeff38a6acb5d0041e9",
+		"name": "Summer",
+		"reverseSeasonalityName": "Winter",
+		"id_v1": 2,
+		"sequence": 2,
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-24T18:05:35.201Z",
+			"ect": "2014-06-24T18:05:35.201Z"
+		}
+	}, {
+		"_id": "53a9bdef622e204c6e00425b",
+		"name": "none",
+		"reverseSeasonalityName": "none",
+		"id_v1": 0,
+		"sequence": 0,
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-24T18:05:35.212Z",
+			"ect": "2014-06-24T18:05:35.212Z"
+		}
+	}, {
+		"_id": "53a9bdef622e204c6e00425a",
+		"name": "Fall",
+		"reverseSeasonalityName": "Spring",
+		"id_v1": 3,
+		"sequence": 3,
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-24T18:05:35.199Z",
+			"ect": "2014-06-24T18:05:35.199Z"
+		}
+	}
+]

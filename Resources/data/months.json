@@ -1,0 +1,224 @@
+[
+	{
+		"_id": "53adb4f9622e204c6e011ddf",
+		"name": "February",
+		"abbreviation": "Feb",
+		"id_v1": 2,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdefd302a3d014004261"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:25.980Z",
+			"ect": "2014-06-27T18:16:25.980Z"
+		}
+	}, {
+		"_id": "53adb4f9f38a6acb5d011e29",
+		"name": "January",
+		"abbreviation": "Jan",
+		"id_v1": 1,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdefd302a3d014004261"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:25.975Z",
+			"ect": "2014-06-27T18:16:25.975Z"
+		}
+	}, {
+		"_id": "53adb4faf38a6acb5d011e2b",
+		"name": "June",
+		"abbreviation": "Jun",
+		"id_v1": 6,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdeff38a6acb5d0041e9"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:26.300Z",
+			"ect": "2014-06-27T18:16:26.300Z"
+		}
+	}, {
+		"_id": "53adb4faf38a6acb5d011e2a",
+		"name": "March",
+		"abbreviation": "Mar",
+		"id_v1": 3,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdeff38a6acb5d0041ea"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-10-16T21:39:02.334Z",
+			"ect": "2014-06-27T18:16:26.272Z"
+		}
+	}, {
+		"_id": "53adb4f9d302a3d014011de3",
+		"name": "none",
+		"abbreviation": "non",
+		"id_v1": 0,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdef622e204c6e00425b"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:25.865Z",
+			"ect": "2014-06-27T18:16:25.865Z"
+		}
+	}, {
+		"_id": "53adb4fad302a3d014011de5",
+		"name": "October",
+		"abbreviation": "Oct",
+		"id_v1": 10,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdef622e204c6e00425a"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:26.845Z",
+			"ect": "2014-06-27T18:16:26.845Z"
+		}
+	}, {
+		"_id": "53adb4fa622e204c6e011de1",
+		"name": "July",
+		"abbreviation": "Jul",
+		"id_v1": 7,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdeff38a6acb5d0041e9"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:26.689Z",
+			"ect": "2014-06-27T18:16:26.689Z"
+		}
+	}, {
+		"_id": "53adb4fa622e204c6e011de0",
+		"name": "April",
+		"abbreviation": "Apr",
+		"id_v1": 4,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdeff38a6acb5d0041ea"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:26.564Z",
+			"ect": "2014-06-27T18:16:26.564Z"
+		}
+	}, {
+		"_id": "53adb4fad302a3d014011de4",
+		"name": "May",
+		"abbreviation": "May",
+		"id_v1": 5,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdeff38a6acb5d0041ea"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:26.417Z",
+			"ect": "2014-06-27T18:16:26.417Z"
+		}
+	}, {
+		"_id": "53adb4faf38a6acb5d011e2c",
+		"name": "August",
+		"abbreviation": "Aug",
+		"id_v1": 8,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdeff38a6acb5d0041e9"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:26.732Z",
+			"ect": "2014-06-27T18:16:26.732Z"
+		}
+	}, {
+		"_id": "53adb4fb622e204c6e011de2",
+		"name": "December",
+		"abbreviation": "Dec",
+		"id_v1": 12,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdefd302a3d014004261"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-30T20:28:34.533Z",
+			"ect": "2014-06-30T20:28:34.533Z"
+		}
+	}, {
+		"_id": "53adb4fbf38a6acb5d011e2d",
+		"name": "November",
+		"abbreviation": "Nov",
+		"id_v1": 11,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdef622e204c6e00425a"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:27.127Z",
+			"ect": "2014-06-27T18:16:27.127Z"
+		}
+	}, {
+		"_id": "53adb4fbd302a3d014011de6",
+		"name": "September",
+		"abbreviation": "Sep",
+		"id_v1": 9,
+		"season": {
+			"_type": "KinveyRef",
+			"_collection": "seasons",
+			"_id": "53a9bdef622e204c6e00425a"
+		},
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-06-27T18:16:27.001Z",
+			"ect": "2014-06-27T18:16:27.001Z"
+		}
+	}
+]
