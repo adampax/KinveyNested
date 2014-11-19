@@ -26,6 +26,10 @@ var win = Ti.UI.createWindow({
 	backgroundColor : '#fff',
 });
 
+/*
+ * OFFLINE Switch
+ */
+
 var offlineSwitch = Ti.UI.createSwitch({
 	top : 40,
 	left : 10,
@@ -45,6 +49,10 @@ win.add(offlineLabel);
 offlineSwitch.addEventListener('change', function(e) {
 	offlineLabel.text = offlineSwitch.value ? 'Online' : 'Offline';
 });
+
+/*
+ * POPULATE DATA
+ */
 
 var populateBtn = Ti.UI.createButton({
 	title : 'Populate Data',
@@ -185,12 +193,31 @@ test2.addEventListener('click', function() {
 	});
 });
 
+/*
+ * CLEAR RESULTS
+ */
+var clearResults = Ti.UI.createButton({
+	title: 'Clear',
+	top:198,
+	right:10
+});
+win.add(clearResults);
+
+clearResults.addEventListener('click', function(){
+	results.value = '';
+});
+
+/*
+ * RESULTS TEXT AREA
+ */
+
 var results = Ti.UI.createTextArea({
 	top : 220,
 	bottom : 0,
 	width : Ti.UI.FILL,
 	backgroundColor : '#efefef',
-	value : 'hello'
+	value : 'hello',
+	font:{fontSize: 10}
 });
 win.add(results);
 
@@ -200,6 +227,11 @@ function addResult(text) {
 
 win.open();
 
+
+/*
+ * INIT KINVEY
+ */
+
 var promise = Kinvey.init({
 	appKey : APP_KEY,
 	appSecret : APP_SECRET,
@@ -208,13 +240,6 @@ var promise = Kinvey.init({
 		online : Titanium.Network.getOnline()// The initial application state.
 	}
 });
-
-/*
- promise.then(function(activeUser) {
- console.log('activeUser: ' + activeUser);
- }, function(error) {
- console.log('error: ' + error);
- });*/
 
 promise.then(function(activeUser) {
 
