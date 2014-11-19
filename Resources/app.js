@@ -56,6 +56,7 @@ win.add(populateBtn);
 populateBtn.addEventListener('click', function() {
 	var months = Lib.parseJSON('/data/months.json');
 	var seasons = Lib.parseJSON('/data/seasons.json');
+	var meals = Lib.parseJSON('/data/meals.json');
 
 	months.forEach(function(month) {
 		Kinvey.DataStore.save('months', month, {
@@ -78,6 +79,17 @@ populateBtn.addEventListener('click', function() {
 			}
 		});
 	});
+	
+	meals.forEach(function(meal) {
+		Kinvey.DataStore.save('meals', meal, {
+			success : function(res) {
+				console.log('meal added');
+			},
+			error : function(res) {
+				console.log('save: ' + JSON.stringify(res));
+			}
+		});
+	});	
 });
 
 var userStatus = Ti.UI.createLabel({
@@ -126,21 +138,45 @@ test1.addEventListener('click', function() {
 		}
 	});
 });
-	var promise = Kinvey.DataStore.get('Months', null, {
+
+/*
+ * TEST 2 Recipe - Months - Season
+ */
+
+var test2 = Ti.UI.createButton({
+	title : 'Test 2: Recipes - Months - Season',
+	top : 150,
+	left : 10
+});
+win.add(test2);
+
+test2.addEventListener('click', function() {
+	addResult('\nStarting Test 2: ' + (offlineSwitch.value ? 'Online' : 'Offline') + '\n');
+	var promise = Kinvey.DataStore.get('meals', null, {
 		offline : !offlineSwitch.value,
 		relations : {
-			//months : 'months',
-			//'months.season' : 'seasons'
-			season : 'seasons'
+			months : 'months',
+			'months.season' : 'seasons'
 
 		},
 		success : function(response) {
-			response.forEach(function(month) {
-				addResult(month.name + ' - ' + month.season.name);
-				console.log(month.name + ' - ' + month.season.name);
-				if (!month.season.name) {
-					console.log(JSON.stringify(month));
-				}
+			addResult('# of Meals: ' + response.length);
+			
+			response.forEach(function(meal, idx) {
+				
+				addResult('\n'+(idx+1) + ': ' + meal.name);
+				meal.months.forEach(function(month) {
+					
+					
+					var season = month.season ? month.season.name : '<b>undefined</b>';
+					
+					addResult(month.name + ' - ' + season);
+					
+					console.log(month.name + ' - ' + season);
+					if (!month.season) {
+						console.log(JSON.stringify(month));
+					}
+				});
 			});
 		},
 		error : function(res) {

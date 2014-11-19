@@ -1,0 +1,431 @@
+[
+	{
+		"_id": "546cf5667c3ae3cd3c00913e",
+		"name": "Pasta Toss with Asparagus and Chicken",
+		"months": [
+			{
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2a"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de0"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de4"
+			}
+		],
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-11-19T19:54:14.936Z",
+			"ect": "2014-11-19T19:54:14.936Z"
+		}
+	}, {
+		"_id": "546cf56705e2fe3112008e2e",
+		"name": "Chicken Burritos",
+		"months": [
+			{
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9f38a6acb5d011e29"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9622e204c6e011ddf"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2a"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de0"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de4"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2b"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de1"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2c"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbd302a3d014011de6"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de5"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbf38a6acb5d011e2d"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fb622e204c6e011de2"
+			}
+		],
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-11-19T19:54:15.009Z",
+			"ect": "2014-11-19T19:54:15.009Z"
+		}
+	}, {
+		"_id": "546cf567a553e3565b008d15",
+		"name": "Easy Roast Chicken with Carrots and Potatoes ",
+		"months": [
+			{
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9f38a6acb5d011e29"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9622e204c6e011ddf"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2a"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de0"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de4"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbd302a3d014011de6"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de5"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbf38a6acb5d011e2d"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fb622e204c6e011de2"
+			}
+		],
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-11-19T19:54:15.015Z",
+			"ect": "2014-11-19T19:54:15.015Z"
+		}
+	}, {
+		"_id": "546cf567b76664a003008ff6",
+		"name": "Pork Tenderloin with Gorgonzola, Potatoes, and Broccoli",
+		"months": [
+			{
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9f38a6acb5d011e29"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9622e204c6e011ddf"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2a"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de0"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de4"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2b"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de1"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2c"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbd302a3d014011de6"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de5"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbf38a6acb5d011e2d"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fb622e204c6e011de2"
+			}
+		],
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-11-19T19:54:15.014Z",
+			"ect": "2014-11-19T19:54:15.014Z"
+		}
+	}, {
+		"_id": "546cf56705e2fe3112008e2f",
+		"name": "Apple Ginger Pork Chops over Rice with Broccoli",
+		"months": [
+			{
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9f38a6acb5d011e29"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9622e204c6e011ddf"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2a"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de0"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de4"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2b"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de1"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2c"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbd302a3d014011de6"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de5"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbf38a6acb5d011e2d"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fb622e204c6e011de2"
+			}
+		],
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-11-19T19:54:15.058Z",
+			"ect": "2014-11-19T19:54:15.058Z"
+		}
+	}, {
+		"_id": "546cf567f770917304008c28",
+		"name": "Cobb Salad",
+		"months": [
+			{
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9f38a6acb5d011e29"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9622e204c6e011ddf"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2a"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de0"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de4"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2b"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de1"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2c"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbd302a3d014011de6"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de5"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbf38a6acb5d011e2d"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fb622e204c6e011de2"
+			}
+		],
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-11-19T19:54:15.106Z",
+			"ect": "2014-11-19T19:54:15.106Z"
+		}
+	}, {
+		"_id": "546cf5675aee6ffe36008ce6",
+		"name": "Spaghetti and Meatballs with Garden Salad",
+		"months": [
+			{
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9f38a6acb5d011e29"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9622e204c6e011ddf"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2a"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de0"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de4"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2b"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de1"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2c"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbd302a3d014011de6"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de5"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbf38a6acb5d011e2d"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fb622e204c6e011de2"
+			}
+		],
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-11-19T19:54:15.116Z",
+			"ect": "2014-11-19T19:54:15.116Z"
+		}
+	}, {
+		"_id": "546cf567f770917304008c29",
+		"name": "Meatloaf with Pan-Seared Cauliflower and Garden Salad",
+		"months": [
+			{
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9f38a6acb5d011e29"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4f9622e204c6e011ddf"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4faf38a6acb5d011e2a"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fa622e204c6e011de0"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de4"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbd302a3d014011de6"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fad302a3d014011de5"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fbf38a6acb5d011e2d"
+			}, {
+				"_type": "KinveyRef",
+				"_collection": "months",
+				"_id": "53adb4fb622e204c6e011de2"
+			}
+		],
+		"_acl": {
+			"gr": true
+		},
+		"_kmd": {
+			"lmt": "2014-11-19T19:54:15.126Z",
+			"ect": "2014-11-19T19:54:15.126Z"
+		}
+	}
+]
