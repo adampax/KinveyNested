@@ -1,0 +1,14 @@
+tmp
+*.class
+*.pyc
+*.pyo
+
+api.jsca
+/.settings
+/Build
+/build
+.project
+.DS_Store
+.fastdev*
+*.log
+*.sqlite
