@@ -3,13 +3,13 @@
  * 	'months'
  *  'seasons'
  *  'recipes'
- * 
+ *
  * 2: Add app key, secret and user/pass to the constants below
- * 
+ *
  * 3: launch app, click populate
- * 
+ *
  * 4: Run tests in both online and offline modes
- * 
+ *
  * 5: Check log for output
  */
 
@@ -49,7 +49,7 @@ offlineSwitch.addEventListener('change', function(e) {
 var populateBtn = Ti.UI.createButton({
 	title : 'Populate Data',
 	top : 40,
-	right: 10
+	right : 10
 });
 win.add(populateBtn);
 
@@ -83,7 +83,9 @@ populateBtn.addEventListener('click', function() {
 var userStatus = Ti.UI.createLabel({
 	top : 80,
 	left : 20,
-	font:{fontSize: 14},
+	font : {
+		fontSize : 14
+	},
 	text : 'activeUser: none'
 });
 win.add(userStatus);
@@ -91,7 +93,7 @@ win.add(userStatus);
 var test1 = Ti.UI.createButton({
 	title : 'Test 1: Month - Season',
 	top : 120,
-	left: 10
+	left : 10
 });
 win.add(test1);
 
@@ -102,36 +104,35 @@ test1.addEventListener('click', function() {
 		relations : {
 			//months : 'months',
 			//'months.season' : 'seasons'
-			season: 'seasons'
+			season : 'seasons'
 
 		},
 		success : function(response) {
-			response.forEach(function(month){
+			response.forEach(function(month) {
 				addResult(month.name + ' - ' + month.season.name);
-					console.log(month.name + ' - ' + month.season.name); 
-					if(!month.season.name){
-						console.log(JSON.stringify(month));	
-					}
+				console.log(month.name + ' - ' + month.season.name);
+				if (!month.season.name) {
+					console.log(JSON.stringify(month));
+				}
 			});
 		},
-		error: function(res){
+		error : function(res) {
 			console.log('fetch error ' + JSON.stringify(res));
 		}
 	});
 });
 
-
 var results = Ti.UI.createTextArea({
-	top: 220,
-	bottom: 0,
-	width: Ti.UI.FILL,
-	backgroundColor: '#efefef',
-	value: 'hello'
+	top : 220,
+	bottom : 0,
+	width : Ti.UI.FILL,
+	backgroundColor : '#efefef',
+	value : 'hello'
 });
 win.add(results);
 
-function addResult(text){
-	results.value += '\n'+text;
+function addResult(text) {
+	results.value += '\n' + text;
 }
 
 win.open();
@@ -162,19 +163,19 @@ promise.then(function(activeUser) {
 
 		Kinvey.User.logout({
 			force : true
-		}).then(function() {
-			Kinvey.User.login({
-				username : USER,
-				password : PASS
-			}, {
-				success : function(res) {
-					userStatus.text = 'activeUser: ' + res.username;
-				},
-				error : function(res) {
-					userStatus.text = 'User login error';
-					console.log('error: ' + JSON.stringify(res));
-				}
-			});
+		});
+
+		Kinvey.User.login({
+			username : USER,
+			password : PASS
+		}, {
+			success : function(res) {
+				userStatus.text = 'activeUser: ' + res.username;
+			},
+			error : function(res) {
+				userStatus.text = 'User login error';
+				console.log('error: ' + JSON.stringify(res));
+			}
 		});
 	}
 });
