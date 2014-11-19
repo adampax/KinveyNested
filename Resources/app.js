@@ -19,11 +19,11 @@ const APP_SECRET = '';
 const USER = '';
 const PASS = '';
 
-var Kinvey = require('/lib/kinvey-titanium-1.1.8');
+var Kinvey = require('/lib/kinvey-titanium-1.1.9-snapshot');
 var Lib = require('/lib/lib');
 
 var win = Ti.UI.createWindow({
-	backgroundColor : '#fff',
+	backgroundColor : '#fff'
 });
 
 /*
@@ -87,7 +87,7 @@ populateBtn.addEventListener('click', function() {
 			}
 		});
 	});
-	
+
 	meals.forEach(function(meal) {
 		Kinvey.DataStore.save('meals', meal, {
 			success : function(res) {
@@ -97,7 +97,7 @@ populateBtn.addEventListener('click', function() {
 				console.log('save: ' + JSON.stringify(res));
 			}
 		});
-	});	
+	});
 });
 
 var userStatus = Ti.UI.createLabel({
@@ -123,7 +123,7 @@ win.add(test1);
 
 test1.addEventListener('click', function() {
 	addResult('\nStarting test 1: ' + (offlineSwitch.value ? 'Online' : 'Offline') + '\n');
-	
+
 	var promise = Kinvey.DataStore.get('months', null, {
 		offline : !offlineSwitch.value,
 		relations : {
@@ -169,17 +169,17 @@ test2.addEventListener('click', function() {
 		},
 		success : function(response) {
 			addResult('# of Meals: ' + response.length);
-			
+
 			response.forEach(function(meal, idx) {
-				
+
 				addResult('\n'+(idx+1) + ': ' + meal.name);
 				meal.months.forEach(function(month) {
-					
-					
+
+
 				month.season = month.season || {};
-				
+
 				addResult(month.name + ' - ' + month.season.name);
-				
+
 				console.log(month.name + ' - ' + month.season.name);
 					if (!month.season) {
 						console.log(JSON.stringify(month));
@@ -216,14 +216,14 @@ test3.addEventListener('click', function() {
 		},
 		success : function(meal) {
 			addResult(meal.name);
-			
-			
+
+
 			meal.months.forEach(function(month) {
-				
+
 				month.season = month.season || {};
-				
+
 				addResult(month.name + ' - ' + month.season.name);
-				
+
 				console.log(month.name + ' - ' + month.season.name);
 				if (!month.season) {
 					console.log(JSON.stringify(month));

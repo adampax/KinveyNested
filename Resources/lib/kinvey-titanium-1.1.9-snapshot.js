@@ -134,7 +134,7 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
      * @type {string}
      * @default
      */
-    Kinvey.SDK_VERSION = '1.1.8';
+    Kinvey.SDK_VERSION = '1.1.9-snapshot';
 
     // Properties.
     // -----------
@@ -255,12 +255,12 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
     };
 
     /**
- * Returns the active user.
- *
- * @throws {Error} `Kinvey.getActiveUser` can only be called after the promise
-     returned by `Kinvey.init` fulfills or rejects.
- * @returns {?Object} The active user, or `null` if there is no active user.
- */
+     * Returns the active user.
+     *
+     * @throws {Error} `Kinvey.getActiveUser` can only be called after the promise
+         returned by `Kinvey.init` fulfills or rejects.
+     * @returns {?Object} The active user, or `null` if there is no active user.
+     */
     Kinvey.getActiveUser = function() {
       // Validate preconditions.
       if(false === activeUserReady) {
@@ -1078,7 +1078,7 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
       return '[object Array]' === Object.prototype.toString.call(arg);
     };
     var isFunction = function(fn) {
-      if('function' !== typeof / . / ) {
+      if('function' !== typeof /./) {
         return 'function' === typeof fn;
       }
       return '[object Function]' === Object.prototype.toString.call(fn);
@@ -1625,7 +1625,7 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
       }
 
       // Return the device information string.
-      var parts = ['js-titanium/1.1.8'];
+      var parts = ['js-titanium/1.1.9-snapshot'];
       if(0 !== libraries.length) { // Add external library information.
         parts.push('(' + libraries.sort().join(', ') + ')');
       }
@@ -3572,7 +3572,7 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
           }, options).then(null, function(error) {
             // If `options.force`, clear the active user on `INVALID_CREDENTIALS`.
             if(options.force && (Kinvey.Error.INVALID_CREDENTIALS === error.name ||
-              Kinvey.Error.EMAIL_VERIFICATION_REQUIRED === error.name)) {
+                Kinvey.Error.EMAIL_VERIFICATION_REQUIRED === error.name)) {
               // Debug.
               if(KINVEY_DEBUG) {
                 log('The user credentials are invalid. Returning success because of the force flag.');
@@ -5072,6 +5072,17 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
     // Relational Data.
     // ----------------
 
+    // Returns a shallow clone of the specified object.
+    var clone = function(object) {
+      var result = {};
+      for(var key in object) {
+        if(object.hasOwnProperty(key)) {
+          result[key] = object[key];
+        }
+      }
+      return result;
+    };
+
     /**
      * @private
      * @namespace KinveyReference
@@ -5094,7 +5105,7 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
         // If a list of documents was passed in, retrieve all relations in parallel.
         if(isArray(document)) {
           var promises = document.map(function(member) {
-            return KinveyReference.get(member, options);
+            return KinveyReference.get(member, clone(options));
           });
           return Kinvey.Defer.all(promises);
         }
@@ -5212,7 +5223,7 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
         // If a list of documents was passed in, retrieve all relations in parallel.
         if(isArray(document)) {
           var promises = document.map(function(member) {
-            return KinveyReference.save(collection, member, options);
+            return KinveyReference.save(collection, member, clone(options));
           });
           return Kinvey.Defer.all(promises);
         }
@@ -8623,7 +8634,7 @@ var exports=exports||this;exports.Google=function(){function e(){var e=this,t=th
     // Use the browser adapter.
     Social.use(SocialAdapter);
 
-    // Provide integration with Backbone (used by Titanium Alloy) if available. 
+    // Provide integration with Backbone (used by Titanium Alloy) if available.
     if('undefined' !== typeof Backbone) {
 
       /* global _: true */
