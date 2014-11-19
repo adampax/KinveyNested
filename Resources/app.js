@@ -90,6 +90,10 @@ var userStatus = Ti.UI.createLabel({
 });
 win.add(userStatus);
 
+/*
+ * TEST 1  Month - Season
+ */
+
 var test1 = Ti.UI.createButton({
 	title : 'Test 1: Month - Season',
 	top : 120,
@@ -99,6 +103,29 @@ win.add(test1);
 
 test1.addEventListener('click', function() {
 	addResult('\nStarting test 1: ' + (offlineSwitch.value ? 'Online' : 'Offline') + '\n');
+	
+	var promise = Kinvey.DataStore.get('months', null, {
+		offline : !offlineSwitch.value,
+		relations : {
+			//months : 'months',
+			//'months.season' : 'seasons'
+			season : 'seasons'
+
+		},
+		success : function(response) {
+			response.forEach(function(month) {
+				addResult(month.name + ' - ' + month.season.name);
+				console.log(month.name + ' - ' + month.season.name);
+				if (!month.season.name) {
+					console.log(JSON.stringify(month));
+				}
+			});
+		},
+		error : function(res) {
+			console.log('fetch error ' + JSON.stringify(res));
+		}
+	});
+});
 	var promise = Kinvey.DataStore.get('Months', null, {
 		offline : !offlineSwitch.value,
 		relations : {
