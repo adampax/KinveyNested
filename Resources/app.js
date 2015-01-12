@@ -19,7 +19,7 @@ const APP_SECRET = '';
 const USER = '';
 const PASS = '';
 
-var Kinvey = require('/lib/kinvey-titanium-1.1.9-snapshot');
+var Kinvey = require('/lib/kinvey-titanium-1.1.9');
 var Lib = require('/lib/lib');
 
 var win = Ti.UI.createWindow({
