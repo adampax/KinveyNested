@@ -12,6 +12,8 @@ Test app for kinvey relational data bugs
 
 `meals`
 
+`speedTest` -- used for Test 4
+
 2: Add app key, secret and user/pass to the constants below
 
 3: launch app, click populate

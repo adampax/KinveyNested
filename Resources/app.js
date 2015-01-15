@@ -3,6 +3,7 @@
  * 	'months'
  *  'seasons'
  *  'recipes'
+ *  'speedTest' -- used for Test 4
  *
  * 2: Add app key, secret and user/pass to the constants below
  *
@@ -237,11 +238,45 @@ test3.addEventListener('click', function() {
 });
 
 /*
+ * TEST 4 - speed test on repeated queries
+ */
+
+var test4 = Ti.UI.createButton({
+	title : 'Test 4: Speed Test for Repeated Queries',
+	top : 210,
+	left : 10
+});
+win.add(test4);
+
+test4.addEventListener('click', function() {
+	var startDate = new Date();
+	var promises = [];
+	Kinvey.DataStore.clean('speedTest', null, {offline: !offlineSwitch.value})
+	.then(function(){
+		for(var i = 0; i < 199; i++){
+			var p = Kinvey.DataStore.save('speedTest', {
+				foo: new Date().toString(),
+				idx: i
+			},{
+				offline: !offlineSwitch.value,
+			});
+			promises.push(p);
+		}
+		return Kinvey.Defer.all(promises);
+	})
+	.then(function(res){
+		var stopDate = new Date();
+			addResult((res.length+1) + ' queries completed, test time: ' + (stopDate - startDate));
+			console.log((res.length+1) + ' queries completed, test time: ' + (stopDate - startDate));
+	});
+});
+
+/*
  * CLEAR RESULTS
  */
 var clearResults = Ti.UI.createButton({
 	title: 'Clear',
-	top:198,
+	top:228,
 	right:10
 });
 win.add(clearResults);
@@ -255,7 +290,7 @@ clearResults.addEventListener('click', function(){
  */
 
 var results = Ti.UI.createTextArea({
-	top : 220,
+	top : 250,
 	bottom : 0,
 	width : Ti.UI.FILL,
 	backgroundColor : '#efefef',
